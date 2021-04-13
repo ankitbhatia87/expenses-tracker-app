@@ -27,7 +27,7 @@ function App() {
       title: "Groceries",
       amount: 45
     },
-  ]
+  ] 
   return (
     <div>
       <Expenses expenseList={expenses} />
