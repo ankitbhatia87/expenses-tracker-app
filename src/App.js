@@ -30,19 +30,13 @@ function App() {
     },
   ];
   const [expensesList, setExpenses] = useState(DEFAULT_EXPENSES);
-  const [formVisibility, setFormVisibility] = useState(false);
   const addExpenseHandler = expense => {
-    setFormVisibility(false);
     setExpenses(prevState => [expense, ...prevState]);
-  }
-
-  const addNewExpenseClickHandler = visibility => {
-    setFormVisibility(true);
   }
 
   return (
     <div>
-      <NewExpense onAddExpense={addExpenseHandler} formVisibility={formVisibility} onAddNewExpense={addNewExpenseClickHandler} />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses expenseList={expensesList} />
     </div>
   );
